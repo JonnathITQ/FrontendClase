@@ -1,0 +1,51 @@
+.main-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../../../assets/img/fondoPagina.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.main-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+app-nav,
+app-foot {
+    position: relative;
+    z-index: 3;
+}
+
+.section-header {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #D32F2F;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section {
+    text-align: center;
+}
+
+.carousel-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    /* Solid semi-transparent background for better performance */
+    border-radius: 20px;
+    padding: 20px;
+}

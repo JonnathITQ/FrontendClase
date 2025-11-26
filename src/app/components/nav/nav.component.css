@@ -1,0 +1,73 @@
+.custom-navbar {
+  background-color: #D32F2F;
+  /* Deep Red - Professional and Striking */
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo {
+  height: 50px;
+  /* Adjust based on logo aspect ratio */
+  width: auto;
+  object-fit: contain;
+  background-color: white;
+  /* Optional: if logo needs a white backing */
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin-left: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 1rem;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+}

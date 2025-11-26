@@ -1,0 +1,44 @@
+.custom-footer {
+    background-color: #D32F2F;
+    color: white;
+    border-top: 3px solid #b71c1c;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon-wrapper {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.social-icon-wrapper:hover .social-icon {
+    transform: scale(1.15);
+}
