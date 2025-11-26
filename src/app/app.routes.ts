@@ -21,6 +21,12 @@ export const routes: Routes = [
     { path: 'art2', component: Art2Component },
     { path: 'productos', component: ProductosComponent },
     { path: 'crud', component: CrudComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'contact', component: ContactComponent },
+    {
+        path: 'auth', 
+        loadChildren: () => import('./auth/features/auth.routes'),
+    },
+    
+   // {path: 'task'}
 
 ];
