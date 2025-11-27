@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "6924c9ed1690f1e8525d052b"
+  },
+  "nombre": "Supercines",
+  "descripcion": "Tu cine de confianza, a los mejores precios después de multicines",
+  "local": 9,
+  "ubicacion": "Planta baja , Segundo Piso, Tercer Piso",
+  "__v": 0,
+  "imagen": "LVl1_dAhqb8xKU7buk8zoaYS.png"
+},
+{
+  "_id": {
+    "$oid": "6927a8bf9464807e65866bb8"
+  },
+  "nombre": "Jugueton",
+  "descripcion": "Descripcion desde el front",
+  "local": 12,
+  "ubicacion": "Planta alta , Segundo Piso, Tercer Piso",
+  "imagen": null
+}]

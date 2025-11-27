@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "6924a81b5523fb441f18f6a0"
+  },
+  "nombre": "David",
+  "apellido": "Ruiz",
+  "edad": 22,
+  "tipoSangre": "B+",
+  "seguroMedico": "Privado + IESS",
+  "correo": "david@hotmail.com",
+  "contrasenia": "david"
+}]

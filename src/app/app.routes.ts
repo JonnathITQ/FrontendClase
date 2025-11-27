@@ -14,7 +14,10 @@ export const routes: Routes = [
 
     { path: '', component: HomeComponent },
     { path: 'tienda', component: TiendaComponent },
-    { path: 'form', component: FormComponent },
+    {
+        path: 'form/:id',
+        loadComponent: () => import('./components/form/form.component').then(m => m.FormComponent)
+    },
     { path: 'nav', component: NavComponent },
     { path: 'foot', component: FootComponent },
     { path: 'art1', component: Art1Component },

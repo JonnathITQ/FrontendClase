@@ -1,1 +1,42 @@
-<p>tienda works!</p>
+<app-nav></app-nav>
+<br>
+
+<h1 style="text-align: center;">Tiendas</h1>
+
+<div class="container mx-auto mt-4">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let tienda of tiendas" class="tienda">
+            <div class="card" style="width: 18rem;">
+                <img src="{{url+'tener-imagen/' + tienda.imagen}}" *ngIf="tienda.imagen" class="card-img-top"
+                    alt="asdasd">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{tienda.nombre}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{tienda.descripcion}}</h6>
+                    <button type="button" class="btn btn-outline-warning"
+                        [routerLink]="['/form', tienda._id]">Editar</button>
+                    <button type="button" class="btn btn-outline-danger"
+                        (click)="setConfirm(tienda._id)">Borrar</button>
+                    <p *ngIf="confirmId == tienda._id">
+                        <span class="confirm">
+                            Estás seguro de borrar esta {{tienda.nombre}}?
+                        </span><br />
+
+                        <button type="button" class="btn btn-light" (click)="setConfirm(null)">
+                            Cancelar
+                        </button>
+
+                        <button type="button" class="btn btn-danger" (click)="borrarProducto(tienda._id)">
+                            Aceptar
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<br>
+<app-foot></app-foot>
