@@ -1,1 +1,70 @@
-<p>crud works!</p>
+<app-nav></app-nav>
+<br><br><br>
+
+<div *ngIf="tienda">
+    <h1 style="text-align: center;">{{titulo}}</h1>
+    <div class="container" style="border-style: outset; border-color: gray; border-width: 10px;">
+        <form #tiendaForm="ngForm" (ngSubmit)="guardarTienda(tiendaForm)">
+            <br>
+            <p>
+                <label for="nombre">
+                    <h3>Nombre de la Tienda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                </label>
+
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="tienda.nombre" required>
+                <span *ngIf="nombre.touched && !nombre.valid">El nombre es obligatorio.</span>
+            </p>
+
+            <p>
+                <label for="descripcion">
+                    <h3>Descripción de la Tienda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                </label>
+
+                <input type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="tienda.descripcion" required>
+                <span *ngIf="descripcion.touched && !descripcion.valid">La descripción es obligatoria.</span>
+            </p>
+
+            <p>
+                <label for="local">
+                    <h3>Número de Local&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                </label>
+                 
+                <input type="number" name="local" #local="ngModel" [(ngModel)]="tienda.local" required>
+                <span *ngIf="local.touched && !local.valid">El número de local es obligatorio.</span>
+            </p>
+
+            <p>
+                <label for="ubicacion">
+                    <h3>Ubicación de la Tienda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                </label>
+
+                <input type="text" name="ubicacion" #ubicacion="ngModel" [(ngModel)]="tienda.ubicacion" required>
+                <span *ngIf="ubicacion.touched && !ubicacion.valid">La ubicación es obligatoria.</span>
+            </p>
+
+            <p>
+
+                <label for="imagen"><h3>Imagen de la Tienda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></label>
+                <span *ngIf="tienda.imagen" style="float: none;">
+                     <img src="{{url+'subir-imagen/'+tienda.imagen}}" *ngIf="tienda.imagen">
+                </span>
+
+                <input type="file" #archivoImagen placeholder="Seleccionar Imagen" (change)="imagenChangeEvent($event)">
+            </p>
+
+            <input type="submit" value="Guardar" class="btn btn-secondary btn-rounded btn-lg" [disabled]="!tiendaForm.form.valid">
+
+            <br><br>
+        </form>
+
+        <div class="message success" *ngIf="status== 'success'">
+            La tienda fue guardada exitosamente.
+        </div>
+
+        <div class="message failed" *ngIf="status== 'failed'">
+            Error al guardar la tienda.
+        </div>
+    </div>
+    <br><br>
+</div>
+<app-foot></app-foot>
